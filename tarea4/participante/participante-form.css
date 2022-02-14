@@ -1,0 +1,56 @@
+
+form{
+    max-width: 40rem;
+    margin: auto;
+    background-color: azure;
+    padding: 2rem;
+}
+.row{
+    padding: .5rem;
+    min-height: 2.7rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.col input{
+    max-width: 20rem;
+    align-self: end;
+}
+.error{
+    display: block;
+    color: red;
+}
+.row-check{
+    padding: .2rem .5rem;
+}
+label, legend{
+    font-size: larger;
+    font-weight: bold;
+}
+input{
+    font-size: larger;
+}
+
+.row-button{
+    text-align: center;
+}
+
+input[type="submit"],input[type="reset"]{
+    margin: 1rem;
+    padding: .5rem;
+}
+
+input[type="submit"]{
+    background-color: rgb(118, 186, 253);
+}
+
+input[type="reset"]{
+    background-color: rgb(255, 114, 114);
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="participante-form.css">
+    <script src="./participante.js" defer></script>
+</head>
+
+<body>
+    <header class="titulo">
+        <h1>Tarea 4 Antonio Prieto</h1>
+        <h2>Inscripción Participante</h2>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li class="menu-item"><a class="menu-link" href="../index.html">Inicio</a></li>
+            <li class="menu-item"><a class="menu-link" href="../ponencias/ponencias.html">Ponencias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form action="" method="get">
+
+            <div class="row">
+                <label for="nombre">Nombre (Obligatorio)</label>
+                <div class="col">
+                    <input type="text" name="nombre" id="nombre">
+                    <span id="error" class="error"></span>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <label for="apellidos">Apellidos (Obligatorio)</label>
+                <div class="col">
+                <input type="text" name="apellidos" id="apellidos">
+                    <span id="error" class="error"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="anno">Año de nacimiento (Obligatorio)</label>
+                <div class="col">
+                <input type="text" name="anno" id="anno">
+                    <span id="error" class="error"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="usuario">Nombre de usuario (Obligatorio)</label>
+                <div class="col">
+                    <input type="text" name="usuario" id="usuario">
+                    <span id="error" class="error"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="pass">Contraseña (Obligatorio)</label>
+                <div class="col">
+                    <input type="text" name="pass" id="pass">
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="passConfirm">Confirmar Contraseña (Obligatorio)</label>
+                <div class="col">
+                    <input type="text" name="passConfirm" id="passConfirm">
+                    <span class="error"></span>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Jornada</legend>
+                <div class="row-check">
+                    <input type="checkbox" name="ciberseguridad" id="ciberseguridad" value="ciberseguridad">
+                    <label for="ciberseguridad">Ciberseguridad</label>
+                </div>
+                <div class="row-check">
+                    <input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos">
+                    <label for="videojuegos">Videojuegos</label>
+                </div>
+                <div class="row-check">
+                    <input type="checkbox" name="daw" id="daw" value="daw">
+                    <label for="daw">Desarrollo Web</label>
+                </div>
+                <div class="row-check">
+                    <input type="checkbox" name="big" id="big" value="big">
+                    <label for="big">Big Data</label>
+                </div>
+                <div class="row-check">
+                    <input type="checkbox" name="dam" id="dam" value="dam">
+                    <label for="dam">Desarrollo Multiplataforma</label>
+                </div>
+                <div class="col">
+                    <span class="error"></span>
+                </div>
+            </fieldset>
+            <div class="row-button">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+            
+        </form>
+    </main>
+</body>
