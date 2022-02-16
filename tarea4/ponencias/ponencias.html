@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 4</title>
     <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="./ponencias-form.css">
     <script src="./ponencias.js" defer></script>
 </head>
 <body>
     <header class="titulo">
         <h1>Tarea 4 Antonio Prieto</h1>
-        <h2>Inscripción Pnencias</h2>
+        <h2>Inscripción Ponencias</h2>
     </header>
     <nav>
         <ul class="menu">
@@ -19,5 +20,86 @@
             <li class="menu-item"><a class="menu-link" href="../participante/participante.html">Participante</a></li>
         </ul>
     </nav>
+    <main>
+        <form id="formulario" action="" method="get">
+
+            <div class="row">
+                <label for="titulo">Titulo (Obligatorio)</label>
+                <div class="col">
+                    <input type="text" name="titulo" id="titulo" required autofocus
+                    pattern="^[ A-Za-zñÑ0-9.,]{5,50}+$">
+                    <span class="error"></span>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <label for="descripcion">Descripción</label>
+                <div class="col">
+                <textarea name="descripcion" id="descripcion"
+                maxlength="500"></textarea>
+                    <span class="error"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="ponente">Ponente (Obligatorio)</label>
+                <div class="col">
+                <input type="text" name="ponente" id="ponente"
+                pattern="^[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]{10,45}+$"
+                required>
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="categoria"></label>
+                <div class="col">
+                    <select name="categoria">
+                        <option value="ciberseguridad">Ciberseguridad</option>
+                        <option value="videojuegos">Videojuegos</option>
+                        <option value="desarrolloWeb">Desarrollo Web.</option>
+                        <option value="bigData">Big Data</option>
+                        <option value="desarrolloMultiplataforma">Desarrollo Multiplataforma</option>
+                    </select>
+                    <span class="error"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="aforo">Aforo (Obligatorio)</label>
+                <div class="col">
+                <input type="number" name="aforo" id="aforo"
+                min="50" max="200" value="50"
+                required>
+                    <span class="error"></span>
+                </div>
+            </div>
+
+            <div class="row-button">
+                <input type="submit" value="Enviar">
+                <input type="reset" id="borrar" value="Borrar">
+            </div>
+            <div id="tabla">
+                <table >
+                    <thead>
+                        <th>Titulo</th>
+                        <th>Descripción</th>
+                        <th>Ponente</th>
+                        <th>Aforo</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="tabla-titulo"></td>
+                            <td id="tabla-descripcion"></td>
+                            <td id="tabla-ponente"></td>
+                            <td id="tabla-aforo"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </form>
+        
+    </main>
 </body>
 </html>

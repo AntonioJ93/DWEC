@@ -1,9 +1,11 @@
 /*
     BODY
 */
-
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
-    background-color: cornsilk;
+    background-color: cornsilk; 
 }
 
 

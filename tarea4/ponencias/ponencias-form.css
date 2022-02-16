@@ -18,8 +18,8 @@ form{
     flex-direction: column;
 }
 
-.col input{
-    max-width: 20rem;
+.col input,.col textarea, .col select{
+    min-width: 15rem;
     align-self: end;
 }
 .error{
@@ -36,7 +36,7 @@ label, legend{
     font-size: larger;
     font-weight: bold;
 }
-input{
+input,textarea, select{
     font-size: larger;
 }
 
@@ -55,5 +55,13 @@ input[type="submit"]{
 
 input[type="reset"]{
     background-color: rgb(255, 114, 114);
+}
+
+#tabla{
+    display: none;
+}
+table{
+    
+    margin: auto;
 }
 
