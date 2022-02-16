@@ -24,7 +24,7 @@
     </nav>
 
     <main>
-        <form action="" method="get">
+        <form id="formulario" action="" method="get">
 
             <div class="row">
                 <label for="nombre">Nombre (Obligatorio)</label>
@@ -77,32 +77,32 @@
             <fieldset>
                 <legend>Jornada</legend>
                 <div class="row-check">
-                    <input type="checkbox" name="ciberseguridad" id="ciberseguridad" value="ciberseguridad">
+                    <input type="checkbox" name="jornada" id="ciberseguridad" value="ciberseguridad">
                     <label for="ciberseguridad">Ciberseguridad</label>
                 </div>
                 <div class="row-check">
-                    <input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos">
+                    <input type="checkbox" name="jornada" id="videojuegos" value="videojuegos">
                     <label for="videojuegos">Videojuegos</label>
                 </div>
                 <div class="row-check">
-                    <input type="checkbox" name="daw" id="daw" value="daw">
+                    <input type="checkbox" name="jornada" id="daw" value="daw">
                     <label for="daw">Desarrollo Web</label>
                 </div>
                 <div class="row-check">
-                    <input type="checkbox" name="big" id="big" value="big">
+                    <input type="checkbox" name="jornada" id="big" value="big">
                     <label for="big">Big Data</label>
                 </div>
                 <div class="row-check">
-                    <input type="checkbox" name="dam" id="dam" value="dam">
+                    <input type="checkbox" name="jornada" id="dam" value="dam">
                     <label for="dam">Desarrollo Multiplataforma</label>
                 </div>
                 <div class="col">
-                    <span class="error"></span>
+                    <span id="jornadaError" class="error"></span>
                 </div>
             </fieldset>
             <div class="row-button">
                 <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
+                <input type="reset" id="borrar" value="Borrar">
             </div>
             
         </form>
