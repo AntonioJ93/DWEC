@@ -2,8 +2,6 @@
 
 window.addEventListener("load", function () {
   titulo.focus();//tambien con el atributo autofocus en el input del formulario
-  mensajeError(titulo, "Debe tener entre 5 y 50 caracteres, no admite caracteres especiales");
-  mensajeError(ponente, "Debe tener entre 10 y 45 caracteres, no admite caracteres especiales");
   if (isPresentCookie()) {
     document.getElementById("tabla-titulo").innerHTML = getCookie("titulo");
     document.getElementById("tabla-descripcion").innerHTML = getCookie("descripcion");
@@ -15,11 +13,11 @@ window.addEventListener("load", function () {
   }
 }, false);
 
-formulario.addEventListener("submit", function (e) {
+formulario.addEventListener("submit", function () {
   setCookie(titulo.value, descripcion.value, ponente.value, categoria.value, aforo.value);
 }, false);
 
-formulario.addEventListener("reset", function (e) {
+formulario.addEventListener("reset", function () {
   tabla.style.display = "none";
   titulo.focus();
 }, false);
@@ -59,10 +57,20 @@ function eliminarCookies() {
   });
 }
 
+/*
+MENSAJES PERSONALIZADOS
+*/
+titulo.addEventListener("input", function () {
+  mensajeError(titulo, "Debe tener entre 5 y 50 caracteres, no admite caracteres especiales");
+}, false);
+ponente.addEventListener("input", function () {
+  mensajeError(ponente, "Debe tener entre 10 y 45 caracteres, no admite números ni caracteres especiales");
+}, false);
+
 function mensajeError(input, mensaje) {
+  //resetear el mensaje siempre antes de comprobar si es válido!!!!!!!!
+  input.setCustomValidity("");
   if (!input.validity.valid) {
     input.setCustomValidity(mensaje);
-  } else {
-    input.setCustomValidity("");
-  }
+  } 
 }

@@ -23,6 +23,7 @@ form{
     align-self: end;
 }
 .error{
+    max-width: 20rem;
     display: block;
     color: red;
 }
