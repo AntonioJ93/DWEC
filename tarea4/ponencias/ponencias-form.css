@@ -61,7 +61,23 @@ input[type="reset"]{
     display: none;
 }
 table{
-    
+    text-align: center;
+    border-collapse: collapse;
     margin: auto;
+}
+td{
+    border:4px solid rgb(250, 222, 112); 
+}
+th{
+    border:4px solid rgb(250, 209, 46);
+}
+td,th{
+    padding: .5rem;
+    background-color: cornsilk; ;
+}
+caption{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 2rem;
 }
 

@@ -27,7 +27,7 @@
                 <label for="titulo">Titulo (Obligatorio)</label>
                 <div class="col">
                     <input type="text" name="titulo" id="titulo" required autofocus
-                    pattern="^[ A-Za-zñÑ0-9.,]{5,50}+$">
+                    pattern="^[ A-Za-zñÑ0-9.,]{5,50}$">
                     <span class="error"></span>
                 </div>
                 
@@ -46,7 +46,7 @@
                 <label for="ponente">Ponente (Obligatorio)</label>
                 <div class="col">
                 <input type="text" name="ponente" id="ponente"
-                pattern="^[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]{10,45}+$"
+                pattern="^[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙñÑ]{10,45}$"
                 required>
                     <span class="error"></span>
                 </div>
@@ -81,6 +81,7 @@
             </div>
             <div id="tabla">
                 <table >
+                    <caption>Resultado</caption>
                     <thead>
                         <th>Titulo</th>
                         <th>Descripción</th>
