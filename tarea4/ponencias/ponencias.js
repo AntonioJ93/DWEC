@@ -31,6 +31,7 @@ function setCookie(titulo, descripcion, ponente, categoria, aforo) {
   document.cookie = `categoria=${categoria}`;
   document.cookie = `aforo=${aforo}`;
 }
+
 function isPresentCookie() {
   //comprobamos datos requeridos
   return getCookie("titulo") != "" && getCookie("ponente") != "" &&
@@ -60,8 +61,8 @@ function eliminarCookies() {
 
 function mensajeError(input, mensaje) {
   if (!input.validity.valid) {
-    // input.validationMessage=mensaje;
+    input.setCustomValidity(mensaje);
   } else {
-    // input.validationMessage="";
+    input.setCustomValidity("");
   }
 }
