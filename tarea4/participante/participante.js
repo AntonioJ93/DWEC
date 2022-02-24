@@ -23,7 +23,6 @@ usuario.addEventListener("input", function () {
     validarNombreUsuario();
 }, false);
 
-
 pass.addEventListener("input", function () {
     validarPass();
 }, false);
@@ -41,11 +40,13 @@ checks.forEach(check => check.addEventListener("change", function () {
     SUBMIT
 */
 formulario.addEventListener("submit", function (e) {
-
-    if (relleno(nombre) && relleno(apellidos)
-        && validarAnno() && validarNombreUsuario()
-        && validarPass() && validarPassConfirm()
-        && validarJornada()) {
+    let camposCorrectos=true;
+    let funcionesValidar=[relleno(nombre),relleno(apellidos),validarAnno(),
+        validarNombreUsuario(),validarNombreUsuario(),validarPass(),
+        validarPassConfirm(),validarJornada()];
+    funcionesValidar.forEach(func=>camposCorrectos=camposCorrectos&&func);
+   
+    if (camposCorrectos) {
         let labelsJornadas = [];
         let jornadas = formulario.querySelectorAll("input[type=checkbox]:checked")
         jornadas.forEach((jornada) => {
