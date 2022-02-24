@@ -50,6 +50,7 @@ formulario.addEventListener("submit", function (e) {
         let jornadas = formulario.querySelectorAll("input[type=checkbox]:checked")
         jornadas.forEach((jornada) => {
             //recuperamos el texto de los labels de los checkbox
+            //ya que los values de los option no son exactamente iguales
             labelsJornadas.push(jornada.nextSibling.nextSibling.textContent);
 
         });
