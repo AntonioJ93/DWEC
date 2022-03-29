@@ -1,0 +1,45 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 6rem;
+}
+
+.item{
+    padding: .5rem 1rem;
+}
+.item,.item input{
+    text-align: center;
+    font-weight: bold;
+}
+.item label{
+    display: block;
+}
+.center{
+    justify-content: center;
+}
+main{
+    max-width: 70rem;
+    margin: auto;
+}
+input[type=submit]{
+    padding:.5rem;
+    background-color: rgb(250, 198, 68);
+    border: none;
+}
+input[type=submit]:hover{
+    background-color: rgb(255, 214, 109);
+   
+}
+.activo{
+    color: blue;
+}
+.bola, .bolo{
+    max-width: 4rem;
+}
