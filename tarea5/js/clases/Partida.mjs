@@ -20,6 +20,14 @@ export class Partida{
         this.renderRow();
     }
 
+    get jugadores(){
+        return this._jugadores;
+    }
+
+    jugadorInicioPartida(){
+        return this._jugadores[Math.round(Math.random())];
+    }
+
     cambiarJugador(jugadorActual){
         return this._jugadores.filter(jug=>jug.id!=jugadorActual.id)[0];
     }
@@ -35,8 +43,6 @@ export class Partida{
         this._nodoPadreDivBolos.appendChild(this._crearRow());
     }
 
-    jugadorInicioPartida(){
-        return this._jugadores[Math.round(Math.random())];
-    }
+   
 
 }

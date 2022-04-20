@@ -13,12 +13,11 @@ export class Turno {
         return _numBolos
     }
 
-    constructor(jugador) {
+    constructor(idJugador) {
         this._bolos = this._poblarBolos();
         this._tiradas = this._poblarTiradas();
-        this._jugador = jugador;
         this._disponible = true;
-
+        this._idRow="jugador"+idJugador;
     }
 
     render() {
@@ -32,7 +31,7 @@ export class Turno {
 
 
     tirar() {
-        let tirada = this._tiradas.filter(tirada => tirada.estaDisponible())[0];
+        let tirada = this._tiradas.filter(t => t.estaDisponible())[0];
         if (tirada != undefined) {
             tirada.bolos = this._bolos;
             this._bolos = tirada.tirarBolosRandom();
@@ -117,7 +116,7 @@ export class Turno {
     }
 
     _rowActiva() {
-        return document.getElementById("jugador" + this._jugador.id);
+        return document.getElementById(this._idRow);
     }
 
     _mostrarPelota() {
@@ -151,14 +150,6 @@ export class Turno {
 
     estaDisponible() {
         return this._disponible;
-    }
-
-    set jugador(jugador) {
-        this._jugador = jugador;
-    }
-
-    get jugador() {
-        return this._jugador;
     }
 
     get tiradas() {

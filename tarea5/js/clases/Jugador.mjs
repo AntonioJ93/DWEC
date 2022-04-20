@@ -6,16 +6,16 @@ export class Jugador{
 
 
     constructor(nombre,id){
+        this._id=id;
         this._turnos=this._poblarTurnos();
         this._nombre=nombre;
-        this._id=id;
     }
 
     _poblarTurnos(){
         let turnos=[];
 
         for(let i=0;i<Partida.nTurnos;i++){
-            turnos.push(new Turno(this));
+            turnos.push(new Turno(this._id));
         }
         return turnos;
     }
