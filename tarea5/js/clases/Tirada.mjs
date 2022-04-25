@@ -4,10 +4,10 @@ import { Turno } from "./Turno.mjs";
 
 export class Tirada{
 
-    constructor(bolos){
+    constructor(bolos,disponible=true,bolosTirados=0){
         this._bolos=bolos;
-        this._disponible=true;
-        this._bolosTirados=0;
+        this._disponible=disponible;
+        this._bolosTirados=bolosTirados;
         
     }
 

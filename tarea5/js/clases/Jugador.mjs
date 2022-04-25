@@ -5,9 +5,15 @@ import { Partida } from "./Partida.mjs";
 export class Jugador{
 
 
-    constructor(nombre,id){
+   /* constructor(nombre,id){
         this._id=id;
         this._turnos=this._poblarTurnos();
+        this._nombre=nombre;
+    }*/
+
+    constructor(nombre,id,turnos=this._poblarTurnos()){
+        this._id=id;
+        this._turnos=turnos;
         this._nombre=nombre;
     }
 

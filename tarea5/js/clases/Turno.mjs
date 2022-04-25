@@ -13,9 +13,9 @@ export class Turno {
         return _numBolos
     }
 
-    constructor(idJugador) {
-        this._bolos = this._poblarBolos();
-        this._tiradas = this._poblarTiradas();
+    constructor(idJugador,bolos=this._poblarBolos(),tiradas=this._poblarTiradas()) {
+        this._bolos = bolos;
+        this._tiradas = tiradas;
         this._disponible = true;
         this._idRow="jugador"+idJugador;
     }

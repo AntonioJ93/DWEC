@@ -13,10 +13,16 @@ export class Bolo{
         return _nodoPadre;
     }
 
-    constructor() {
+  /*  constructor() {
         this._img=this._imgDePie;//por defecto
         this._nodeBolo=this._crearBolo();
         this._dePie=true;
+    }*/
+
+    constructor(img=this._imgDePie,dePie=true) {
+        this._img=img;
+        this._nodeBolo=this._crearBolo();
+        this._dePie=dePie;
     }
 
     get nodeBolo(){
