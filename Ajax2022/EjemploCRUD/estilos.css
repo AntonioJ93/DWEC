@@ -1,0 +1,21 @@
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 25px;
+    color: #36A0FF;
+    
+}
+.container-fluid{
+    display:none;
+}
+input.form-control {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal; 
+    text-decoration: inherit; 
+    
+}  
